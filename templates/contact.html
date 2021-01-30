@@ -1,0 +1,210 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!--logo add-->
+            <div><a href="#"><img src="{% static 'image/SSLOGO.jpg' %}" alt="..." class="d-block w-75"
+                        style="height: 40px;" class="img-responsive logo"></a> </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="configuration">Configuration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="facilites">Facilites</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="notice">Notice</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+
+            </div>
+
+            </form>
+        </div>
+        </div>
+    </nav>
+
+<!--contact  form-->
+
+<div class="container my-4">
+    <form class="row g-3 needs-validation" method="POST" novalidate>
+        {% csrf_token %}
+        <div class="col-md-2">
+            <label for="validationCustom01" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="validationCustom01" name="fname" value="" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <label for="validationCustom05" class="form-label">Mobile No</label>
+            <input type="text" class="form-control" id="validationCustom05" name="mobile" value="" required>
+            <div class="invalid-feedback">
+            </div>
+        </div>
+
+
+        <div class="col-md-2">
+            <label for="validationCustom04" class="form-label">Buy/Rent</label>
+            <select class="form-select" id="validationCustom04" name="buy"  value="" required>
+                <option selected disabled value="">Choose...</option>
+                <option>Buy</option>
+                <option>Rent</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid .
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <label for="validationCustom05" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="validationCustom05" name="subject" value=""  required>
+            <div class="invalid-feedback">
+            </div>
+        </div>
+
+
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit" name="contact" value="contact">Contact</button>
+        </div>
+    </form>
+</div>
+
+    <!--  footer -->
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="contact">
+                    <h3>Conatct Us</h3>
+                    <span>Sun Simpolo,<br>
+                        Near Nilkanthvilla Bunglows,<br>
+                        Bopal-Shilaj Road
+                        Bopal,<br>
+                        Ahmedabad-380058</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="contact">
+                    <h3>Addtional Links</h3>
+                    <ul class="lik">
+                        <li> <a href="about">About</a></li>
+                        <li> <a href="#">Configuration</a></li>
+                        <li> <a href="#">Facilites</a></li>
+                        <li> <a href="#">Contact</a></li>
+                        <li> <a href="#">Profile</a></li>
+                        <li> <a href="#">Notice</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="contact">
+                    <h3>Amenities</h3>
+                    <ul class="lik">
+                        <li> <a href="#"> Children Play Area</a></li>
+                        <li> <a href="#">24x7 Security</a></li>
+                        <li> <a href="#">CCTV Camera</a></li>
+                        <li> <a href="#">Landscaped Garden</a></li>
+                        <li> <a href="#">Lift</a></li>
+                        <li> <a href="#">Club House</a></li>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright 2021 All Right Reserved By Sun Simpolo by Jignesh Patel</p>
+    </div>
+    </div>
+
+    </div>
+    </footr>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+
+            $(".zoom").hover(function () {
+
+                $(this).addClass('transition');
+            }, function () {
+
+                $(this).removeClass('transition');
+            });
+        });
+
+    </script>
+</body>
+
+</html>
